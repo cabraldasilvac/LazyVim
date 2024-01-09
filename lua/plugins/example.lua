@@ -11,12 +11,25 @@ if true then return {} end
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "gruvbox",
+    },
+  },
+  -- Configure LazyVim to load catppuccin
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppucin",
     },
   },
 
